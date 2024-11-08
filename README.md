@@ -209,6 +209,35 @@ média >= 7.0 ? "aprovado" : "Reprovado"
 
 usar o devtools para visualizar os erros.
 
+# CONDICIONAIS:
+
+* Condições simples:
+
+if (condição) {
+    true
+}
+
+
+* Condições compostas:
+
+if (condição) {
+    true
+} else {
+    false
+}
+
+
+* Condições aninhadas:
+
+if (condition 1){
+    block1 
+} else {
+    if (condition 2) {
+        block 2 
+    } else {
+        block 3
+    } 
+}
 
 
                                                    
