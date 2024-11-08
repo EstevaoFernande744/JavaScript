@@ -64,3 +64,41 @@ window.alert('É um grande prazer te conhecer, '+ nome)
 * Number.parseInt() - para transformar em inteiro;
 * Number.parseFloat() - para transformar em real;
 
+Mas podemos ignorar essas duas configurações e usar apenas Number()
+
+# PARA MUDAR O TIPO DE VARIAVEL DE NUMBER PARA STRING PODEMOS USAR O COMANDO:
+
+* n.toString()
+
+ou String(n)
+
+# SE USARMOS `` ELA NOS PERMITE USAR TEMPLATE STRING
+
+var nome = 'Estevão'
+
+var idade = '26'
+
+var nota = '10.0'
+
+em vez de usar 
+
+'O aluno ' + nome + ' com ' + idade + ' anos de idade tirou a nota '+ nota
+
+usamos `O aluno ${nome} com ${idade} anos de idade tirou ${nota}` e obtemos a mesma resposta do codigo de cima;
+
+Os comandos .length e .toUpperCase() serve para dizer quandos caracteres a string possui e a segunda transforma todas as letras em 'MAIÚSCULAS'.
+
+toLowerCase() transforma todas as letras em 'minúsculas'.
+
+# PARA COLOCAR CASAS DECIMAIS PODEMOS USAR ESSE COMANDO:
+
+* n1.toFixed(n) \\ número de casa decimais - n
+
+* n1.toFixed(n).replace('.' ,  ',') \\ conseguimos substituir o ponto pela virgula;
+
+* n1.toLocaleString('pt-BR', {style: 'currency, currency: 'BRL'}); <!-- esse codigo serve para colocar a moeda nos valores (real) -->
+
+n1.toLocaleString('pt-BR', {style: 'currency, currency: 'USD'}) \\ para colocar em dolar;
+
+n1.toLocaleString('pt-BR', {style: 'currency, currency: 'EUR'}) \\ Euro;
+
