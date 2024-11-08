@@ -58,3 +58,9 @@ var nome = window.prompt('Qual é seu nome?')
 window.alert('É um grande prazer te conhecer, '+ nome)
 
 + tem a função de concatenação nesse caso
+
+# PARA MUDAR O TIPO DE VARIAVEL DE STRING PARA REAL OU INTEIRO USAMOS O COMANDO:
+
+* Number.parseInt() - para transformar em inteiro;
+* Number.parseFloat() - para transformar em real;
+
