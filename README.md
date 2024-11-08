@@ -207,6 +207,8 @@ média >= 7.0 ? "aprovado" : "Reprovado"
                                                                  strong
 
 
+usar o devtools para visualizar os erros.
+
 
 
                                                    
