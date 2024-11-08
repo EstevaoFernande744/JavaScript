@@ -179,3 +179,34 @@ teste ? true : false
 
 média >= 7.0 ? "aprovado" : "Reprovado"
 
+
+                                        Árvore DOM
+                                           Window
+                                   (janela do navegador)
+                                        |    |    |  
+                                       /     |     \
+                                     /       |       \
+                                Location   document   history
+                             (localização  (d. atual)  (vai guardando
+                                do site)                de onde veio e 
+                                              |          para onde você vai)
+                                              |
+                                              |
+                                             html  -> (patent)
+                                             /  \
+                                            /    \
+                                           /      \
+                                        head      body ->(children)
+                                        |            |   
+                                        |            |
+                                     /  |  \         L ___________________
+                                    /   |   \               |      |     |
+                                meta   link  title          h1     p    div
+                                                                   |
+                                                                   |
+                                                                 strong
+
+
+
+
+                                                   
