@@ -102,3 +102,80 @@ n1.toLocaleString('pt-BR', {style: 'currency, currency: 'USD'}) \\ para colocar 
 
 n1.toLocaleString('pt-BR', {style: 'currency, currency: 'EUR'}) \\ Euro;
 
+# OPERADORES;
+
+* Aritméticos;
+
+* Atribuição;
+
+* Relacionais;
+
+* Lógicos; 
+
+* Ternário;
+
+# Aritmeticos:
+
++ - * / % ** ----> soma, subtração, multiplicação, divisão, esse % não é de porcentagem é o resto de uma divisão que não é exata, ** é a potencia.
+
+se colocarmos 5 + 3 / 2 vai funcionar igual a regra de operações normais, para somar primeiro precisamos utilizar os ()
+
+então (5 + 3)/2 é o que você quer.
+
+# Ordem de precedência:
+
+|   ()
+|   **
+|   * / %
+|   + - 
+\/
+
+
+# PODEMOS SIMPLIFICAR A AUTO ATRIBUIÇÃO: 
+
+var n = 3
+
+n = n + 4 ou n+=4 por ser o mesmo número recebendo ele mesm;
+
+# ELEMENTOS RELACIONAIS:
+
+5 > 2 -> true
+7 < 4 -> false
+8 >= 8 -> true
+9 <= 7 -> false
+5 == 5 -> true
+4 != 4 -> false (diferente)
+
+5 == 5 true
+5 == '5' true
+5 === '5' false
+5 === 5 true
+
+# ELEMENTOS LÓGICOS:
+
+! negação
+&& conjunção
+|| disjunção 
+
+true -  && - true   -> true      
+true -  && - false  -> false      
+false - && - true   -> false    
+false - && - false  -> false  
+
+true -  || - true   -> true      
+true -  || - false  -> true      
+false - || - true   -> true    
+false - || - false  -> false  
+
+| Aritmeticos;
+| Relacionais;
+| Lógicos;
+|
+\/
+
+# OPERADOR TERNÁRIO:
+
+teste ? true : false
+
+média >= 7.0 ? "aprovado" : "Reprovado"
+
