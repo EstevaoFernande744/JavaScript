@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade para Votações 2025</title>
+    <style>
+
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+         main{
+            box-sizing: border-box;
+            background-color: darkmagenta;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+         }
+
+         h1 {
+            text-align: center;
+         }
+
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Analise de Idade para Votações</h1>
+
+    <p>Veja se você vai conseguir votar ou nao no ano de 2026:</p>
+
+    <p>Data de Nascimento: <input type="date" name="data" id="idata"></p>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <p id="idade"></p>
+    <p id="votacoes"></p>
+    <p id="dataEL"></p>
+
+    <script>
+        function calcular() {
+            var data = window.document.getElementById('idata').value
+            var idadeEL = window.document.getElementById('idade')
+            var votacoesEL = window.document.getElementById('votacoes')
+            var dataEL = window.document.getElementById('dataEL') 
+            
+           
+
+
+            // Verificar se a data de nascimento foi preechida!
+
+            if (!data){
+                idadeEL.innerHTML = 'Por favor, insira sua data de nascimento!'
+                votacoes.innerHTML = ''
+                dataEL.innerHTML = ''
+                return
+            }
+
+
+            // Converter a data em um objeto
+            var datanasc = new Date(data)
+
+            // Define o ano de verção (2026)
+            var anoVeri = 2026
+
+            // Calculo de idade
+            var idade = anoVeri - datanasc.getFullYear()
+
+            // Ajusto de idade caso não tenha nascido em 2026
+            var mesnasc = datanasc.getMonth()
+            var dianasc = datanasc.getDate()
+
+            // Para verificar se a data é depois do dia 21 de outubro
+            if (mesnasc > 9 || (mesnasc === 9 && dianasc > 21)) {
+                idade--
+            }
+
+         
+            idadeEL.innerHTML = `Sua idade será ${idade} anos`
+
+            // Verificando o status do voto com base na idade 
+
+            if (idade < 16) {
+                votacoesEL.innerHTML = 'Não vota'
+                dataEL.innerHTML = ''
+            } else if (idade < 18 || idade >= 70) {
+                votacoesEL.innerHTML = 'Voto opcional';
+                dataEL.innerHTML = 'A data das eleições é dia 21/10/2026'
+            } else {
+                votacoesEL.innerHTML = 'Voto obrigatório';
+                dataEL.innerHTML = 'A data das eleições é dia 21/10/2026'
+            }
+        
+        }
+    </script>
+    </main>
+</body>
+</html>
