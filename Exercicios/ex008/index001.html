@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
     <h1>Sistema de Multas</h1>
@@ -17,13 +22,18 @@
         var res = window.document.querySelector('p#res')
         var vel = Number(itxtvel.value)
         res.innerHTML = `Sua velocidade atual é de <strong>${vel} km/h</strong>`
+        var body = window.document.body
+        var kmm = vel - 80
         
         if (vel > 80) {
             res.innerHTML += '<p>Você está <strong>Multado!</strong> por excesso de velocidade</p>'
-           
+            body.style.background = 'red'
+            if (kmm > 0){
+            window.alert(`Você ultrapassou ${kmm}km a mais`)
+            }
         } else {
             res.innerHTML += '<p> Dirija sempre com cinto de segurança!</p>'
-            
+            body.style.background = 'green'
         }
         }
     </script>

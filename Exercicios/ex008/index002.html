@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle e Nacionalidade</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
     <h1>Sistema de Controle de Nacionalidade</h1>
@@ -15,14 +20,15 @@
         function calcular() {
         var pais = window.document.getElementById('itxtpais').value //ou .querySelector('input#itxtvel')
         var nacio = window.document.querySelector('p#nacio')
+        var body = window.document.body
         nacio.innerHTML = `Seu pais de origem é <strong>${pais}</strong>`
         
         if (pais === 'Brasil') {
             nacio.innerHTML += '<p>Você é <strong>Brasileiro!</strong> </p>'
-           
+            body.style.background = 'green'
         } else {
             nacio.innerHTML += '<p>Você é <strong>Estrangueiro!</strong></p>'
-            
+            body.style.background = 'red'
         }
         }
     </script>
