@@ -1,50 +1,33 @@
-function verificar() {
-    var data = new Date()
-    var ano = data.getFullYear()
-    var fano = window.document.getElementById('itxtano')
-    var res = window.document.querySelector('div#res')
+function tabuada() {
+    let numb = document.getElementById('inum')
+    let tab = document.getElementById('selctab')
 
-    if (Number(fano.value).length == 0 || Number(fano.value) > ano) {
-        window.alert('[ERRO] Verifique os dados e tente novamente!') 
+   /*  if(numb.value.length == 0) {
+        window.alert('Por favor, digite um número!')
     } else {
-        var fsex = window.document.getElementsByName('radsex')
-        var idade = ano - Number(fano.value)
-        var genero = ``
-        var img = window.document.createElement('img')
-        img.setAttribute('id', 'foto')
-        if (fsex[0].checked) {
-            genero = 'Homem'
-            if(idade >= 0 && idade < 5) {
-                img.setAttribute('src', 'imagens/hbebe.png')
-            } else if (idade < 14 ) {
-                img.setAttribute('src', 'imagens/hcrianca.png')
-            } else if (idade < 18) {
-                img.setAttribute('src', 'imagens/hjovem.png')
-            } else if (idade < 50) {
-                img.setAttribute('src', 'imagens/hadulto.png')
-            } else {
-                img.setAttribute('src', 'imagens/hidoso.png')
-            }
-                
-        } else if (fsex[1].checked) {
-            genero = 'Mulher'
-            if(idade >= 0 && idade < 5) {
-                img.setAttribute('src', 'imagens/mbebe.png')
-            } else if (idade < 14 ) {
-                img.setAttribute('src', 'imagens/mcrianca.png')
-            } else if (idade < 18) {
-                img.setAttribute('src', 'imagens/mjovem.png')
-            } else if (idade < 50) {
-                img.setAttribute('src', 'imagens/madulta.png')
-            } else {
-                img.setAttribute('src', 'imagens/midoso.png')
-            }
-              
+        let n = Number(numb.value)
+        let c = 1 
+        tab.innerHTML = ''
+        while (c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
         }
-        res.style.textAlign ='center'
-        res.innerHTML = `Detectamos que você é um(a) ${genero} com ${idade} anos.` 
-        res.appendChild(img)
-    } 
+        */
 
-
+        if(numb.value.length == 0 ){ //programa com for
+                window.alert('Por favor, digite um número!')
+            } else {
+                 tab.innerHTML = ''
+        for(let c = 1; c <= 10; c++){
+                let n = Number(numb.value)
+                let item = document.createElement('option')
+                item.text = `${n} x ${c} = ${n*c}`
+                tab.value = `tab${c}`
+                tab.appendChild(item)
+            }
+        
+    }
 }

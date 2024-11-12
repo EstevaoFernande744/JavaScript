@@ -4,33 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
-    <title>Reconhecedor de Idade</title>
+    <title>Tabuada</title>
 </head>
 <body>
     <header>
-        <h1>Verificador de Idade</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
 
-        <div id="msg">
-            <p>Ano de Nascimento:
-                <input type="number" name="txtano" id="itxtano">
+        <div id="seletor">
+            <p>Número:
+                <input type="number" name="num" id="inum">
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
             </p>
-            
-            <p>
-                <input type="radio" name="radsex" id="m" checked>
-                <label for="m">Masculino</label>
-                <input type="radio" name="radsex" id="f">
-                <label for="f">Feminino</label>
-            </p>
-
-            <input type="button" value="Verificar" onclick="verificar()">
 
         </div>
 
         <div id="res">
 
-            <p>Preencha os dados acima para ver o resultado!</p>
+            <select name="tabuada" id="selctab" size="10"><option value="o.inicio">Digite um número a cima!</option></select>
 
         </div>
 
