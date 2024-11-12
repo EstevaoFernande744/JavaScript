@@ -74,7 +74,7 @@ ou String(n)
 
 # SE USARMOS `` ELA NOS PERMITE USAR TEMPLATE STRING
 
-var nome = 'Estevão'
+var nome = 'Estevão'    
 
 var idade = '26'
 
