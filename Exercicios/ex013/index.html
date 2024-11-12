@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Super Contador</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+
+        <div id="dados">
+            <p><label for="itxtinicio">Inicio:</label>
+                <input type="number" name="txtinicio" id="itxtinicio">
+            </p>
+            
+            <p>
+               <label for="itxtfim">Fim: </label>
+               <input type="number" name="txtfim" id="itxtfim">
+            </p>
+
+            <p>
+                <label for="itxtpasso">Passo:</label>
+                <input type="number" name="txtpasso" id="itxtpasso">
+            </p>
+
+            <input type="button" value="Contar" onclick="contar()">
+
+        </div>
+
+        <div id="res">
+
+            Preparando a contagem...
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Telecab</p>
+    </footer>
+    <script src="script/script001.js"></script>
+</body>
+</html>
